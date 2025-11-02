@@ -21,11 +21,16 @@
         email: this.email.value,
         password: this.password.value
       };
-      fetch("https://script.google.com/macros/s/AKfycbzxfLM2gbMuQwnTJxQaKxpGAU3pTtBkdaH0_VBShcwu/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" }
-      }).then(res => alert("Registered successfully!"));
+      fetch("https://script.google.com/macros/s/AKfycbytYZvAfaVeFALf4zgE_Y4rHsnE6dLqOwXJPmtdrIVLd5JE3vAlcpQZdeabY_UIdRkrXw/exec", {
+  method: "POST",
+  body: JSON.stringify({
+    action: "register",
+    name: this.name.value,
+    email: this.email.value,
+    password: this.password.value
+  }),
+  headers: { "Content-Type": "application/json" }
+}).then(res => alert("Registered successfully!"));
     });
   </script>
 </body>
